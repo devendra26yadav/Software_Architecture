@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: lab11-kafka
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      auto-offset-reset: earliest
+      properties:
+        spring.json.trusted.packages: edu.miu.sa.lab11.kafka
+        spring.json.value.default.type: edu.miu.sa.lab11.kafka.domain.Order
+        spring.json.use.type.headers: false
+    listener:
+      missing-topics-fatal: false
+
+logging:
+  level:
+    edu.miu.sa.lab11.kafka: INFO
+
+app:
+  kafka:
+    transaction-id-prefix: tx-order-

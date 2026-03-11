@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: api-gateway
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8090/realms/myrealm
+          jwk-set-uri: http://localhost:8090/realms/myrealm/protocol/openid-connect/certs
+
+
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: upstream
+              uri: http://localhost:8081
+              predicates:
+                - Path=/name, /phone, /salary, /sensitive
+
+            - id: downstream
+              uri: http://localhost:8082
+              predicates:
+                - Path=/private
+server:
+  port: 8085
+
+

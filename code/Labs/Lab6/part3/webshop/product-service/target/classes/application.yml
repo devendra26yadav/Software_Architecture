@@ -1,0 +1,28 @@
+server:
+  port: 8901
+
+spring:
+  application:
+    name: product-service
+  data:
+    mongodb:
+      uri: ${PRODUCT_MONGODB_URI:mongodb://localhost:27017/lab6_product_service}
+  cloud:
+    consul:
+      host: ${CONSUL_HOST:localhost}
+      port: ${CONSUL_PORT:8500}
+      discovery:
+        register: true
+        instance-id: ${spring.application.name}-${server.port}
+        hostname: ${CONSUL_SERVICE_HOST:localhost}
+        health-check-url: http://${CONSUL_HEALTHCHECK_HOST:host.docker.internal}:${server.port}/actuator/health
+        health-check-interval: 10s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always

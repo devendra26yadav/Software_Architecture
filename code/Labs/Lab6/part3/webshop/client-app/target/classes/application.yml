@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: webshop-client-app
+  main:
+    web-application-type: none
+
+client:
+  product-base-url: ${PRODUCT_BASE_URL:http://localhost:8901/api/products}
+  shopping-base-url: ${SHOPPING_BASE_URL:http://localhost:8902/api/shopping-carts}
+  customer-number: ${CLIENT_CUSTOMER_NUMBER:CUST-100}

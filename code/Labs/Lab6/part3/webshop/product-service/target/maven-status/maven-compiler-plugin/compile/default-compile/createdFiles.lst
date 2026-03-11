@@ -1,0 +1,8 @@
+com/miu/lab6/productservice/api/AddProductRequest.class
+com/miu/lab6/productservice/ProductServiceApplication.class
+com/miu/lab6/productservice/config/ApiExceptionHandler.class
+com/miu/lab6/productservice/api/ProductController.class
+com/miu/lab6/productservice/infrastructure/ProductRepository.class
+com/miu/lab6/productservice/application/ProductService.class
+com/miu/lab6/productservice/domain/Product.class
+com/miu/lab6/productservice/api/UpdatePriceRequest.class

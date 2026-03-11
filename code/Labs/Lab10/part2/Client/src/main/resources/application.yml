@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: part2-client
+  main:
+    web-application-type: NONE
+
+lab:
+  service-a-base-url: http://localhost:8181

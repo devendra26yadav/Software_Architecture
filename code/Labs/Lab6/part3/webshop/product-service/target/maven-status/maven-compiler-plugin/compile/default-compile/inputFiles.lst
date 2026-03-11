@@ -1,0 +1,8 @@
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/product-service/src/main/java/com/miu/lab6/productservice/ProductServiceApplication.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/product-service/src/main/java/com/miu/lab6/productservice/api/AddProductRequest.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/product-service/src/main/java/com/miu/lab6/productservice/api/ProductController.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/product-service/src/main/java/com/miu/lab6/productservice/api/UpdatePriceRequest.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/product-service/src/main/java/com/miu/lab6/productservice/application/ProductService.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/product-service/src/main/java/com/miu/lab6/productservice/config/ApiExceptionHandler.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/product-service/src/main/java/com/miu/lab6/productservice/domain/Product.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/product-service/src/main/java/com/miu/lab6/productservice/infrastructure/ProductRepository.java

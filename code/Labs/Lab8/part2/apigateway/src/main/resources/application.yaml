@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: apigateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: productservice
+          uri: http://localhost:8900
+          predicates:
+            - Path=/product/**
+
+        - id: stockservice
+          uri: http://localhost:8901
+          predicates:
+            - Path=/stock/**
+
+# Zipkin tracing (top-level, not under spring)
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans

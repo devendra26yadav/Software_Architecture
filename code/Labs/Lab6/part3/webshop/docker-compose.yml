@@ -1,0 +1,20 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: lab6-webshop-mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: lab6_webshop
+    volumes:
+      - mongo_data:/data/db
+
+  consul:
+    image: hashicorp/consul:1.19
+    container_name: lab6-webshop-consul
+    command: "agent -dev -client=0.0.0.0"
+    ports:
+      - "8500:8500"
+
+volumes:
+  mongo_data:

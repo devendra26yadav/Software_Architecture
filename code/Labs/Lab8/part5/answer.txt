@@ -1,0 +1,16 @@
+One good way to solve this is to stop making the mobile app collect data from all 15 microservices when 
+the first screen loads. Instead, we can create one service just for the mobile app, often called a Backend 
+for Frontend or an Aggregator. 
+The Android and iOS app would call only this one service. 
+That service would already have the data for the first page prepared in a single read model, 
+so it can return everything very quickly, 
+usually within the 2.5 second limit.
+
+The important idea is that the data should be combined before the user opens the app, 
+not during the request. Each microservice can publish events whenever its data changes, and the 
+aggregator service can listen to those events and keep its own up-to-date view of the data needed 
+for the first screen. This works better than normal caching because the data is refreshed whenever
+changes happen, so it does not stay stale for too long. It also works better than just making 
+asynchronous calls, because some requests depend on the results of other services. In short, 
+the best solution is to use a BFF/aggregator with an event-driven, 
+precomputed view of the mobile app’s first page.

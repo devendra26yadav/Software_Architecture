@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: lab9-part3
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/lab9_part3
+

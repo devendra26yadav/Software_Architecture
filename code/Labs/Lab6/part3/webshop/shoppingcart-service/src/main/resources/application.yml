@@ -1,0 +1,32 @@
+server:
+  port: 8902
+
+spring:
+  application:
+    name: shoppingcart-service
+  data:
+    mongodb:
+      uri: ${SHOPPING_MONGODB_URI:mongodb://localhost:27017/lab6_shoppingcart_service}
+  cloud:
+    consul:
+      host: ${CONSUL_HOST:localhost}
+      port: ${CONSUL_PORT:8500}
+      discovery:
+        register: true
+        instance-id: ${spring.application.name}-${server.port}
+        hostname: ${CONSUL_SERVICE_HOST:localhost}
+        health-check-url: http://${CONSUL_HEALTHCHECK_HOST:host.docker.internal}:${server.port}/actuator/health
+        health-check-interval: 10s
+
+clients:
+  product-service:
+    base-url: http://${PRODUCT_SERVICE_NAME:product-service}/api/products
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always

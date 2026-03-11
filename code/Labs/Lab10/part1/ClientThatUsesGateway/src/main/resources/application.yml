@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: client
+  main:
+    web-application-type: NONE
+
+security:
+  demo:
+    token-url: http://localhost:8090/realms/myrealm/protocol/openid-connect/token
+    client-id: myclient
+    client-secret: 0maxLeON2d9gwyF1ilv52YBxgB5AoXGL

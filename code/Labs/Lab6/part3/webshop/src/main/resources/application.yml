@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: lab4-webshop
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/lab4_webshop}
+
+components:
+  product:
+    base-url: ${PRODUCT_COMPONENT_BASE_URL:http://localhost:${server.port}/api/products}
+
+lab4:
+  client:
+    enabled: ${LAB4_CLIENT_ENABLED:false}
+    base-url: ${LAB4_CLIENT_BASE_URL:http://localhost:${server.port}/api}
+    customer-number: ${LAB4_CLIENT_CUSTOMER_NUMBER:CUST-100}

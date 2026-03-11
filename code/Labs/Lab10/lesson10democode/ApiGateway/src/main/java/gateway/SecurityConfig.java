@@ -1,0 +1,27 @@
+package gateway;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.web.server.ServerHttpSecurity;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.server.SecurityWebFilterChain;
+
+@Configuration
+public class SecurityConfig {
+    @Bean
+    public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+        http
+                .csrf(ServerHttpSecurity.CsrfSpec::disable)
+
+                .authorizeExchange(exchanges -> exchanges
+                        .pathMatchers("/name").permitAll()       // <-- exclude /name from authentication
+                        .anyExchange().authenticated()           // all other routes require valid JWT
+                )
+                .oauth2ResourceServer(oauth2 -> oauth2
+                        .jwt(jwt -> {})
+                );
+
+        return http.build();
+    }
+}

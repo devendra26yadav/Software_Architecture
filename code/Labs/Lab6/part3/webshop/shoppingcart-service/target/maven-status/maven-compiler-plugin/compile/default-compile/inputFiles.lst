@@ -1,0 +1,13 @@
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/shoppingcart-service/src/main/java/com/miu/lab6/shoppingcartservice/ShoppingCartServiceApplication.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/shoppingcart-service/src/main/java/com/miu/lab6/shoppingcartservice/api/AddToCartRequest.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/shoppingcart-service/src/main/java/com/miu/lab6/shoppingcartservice/api/ShoppingCartController.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/shoppingcart-service/src/main/java/com/miu/lab6/shoppingcartservice/api/ShoppingCartItemResponse.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/shoppingcart-service/src/main/java/com/miu/lab6/shoppingcartservice/api/ShoppingCartResponse.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/shoppingcart-service/src/main/java/com/miu/lab6/shoppingcartservice/application/ShoppingCartService.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/shoppingcart-service/src/main/java/com/miu/lab6/shoppingcartservice/config/ApiExceptionHandler.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/shoppingcart-service/src/main/java/com/miu/lab6/shoppingcartservice/config/RestClientConfig.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/shoppingcart-service/src/main/java/com/miu/lab6/shoppingcartservice/domain/CartItem.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/shoppingcart-service/src/main/java/com/miu/lab6/shoppingcartservice/domain/ShoppingCart.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/shoppingcart-service/src/main/java/com/miu/lab6/shoppingcartservice/infrastructure/ProductClient.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/shoppingcart-service/src/main/java/com/miu/lab6/shoppingcartservice/infrastructure/ProductSnapshot.java
+/Users/devraj/Others/MIU/Software_Architecture/code/Labs/Lab6/part3/webshop/shoppingcart-service/src/main/java/com/miu/lab6/shoppingcartservice/infrastructure/ShoppingCartRepository.java
